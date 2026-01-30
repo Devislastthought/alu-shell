@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# List files showing only text after first dash
+for f in *-*; do
+  echo "${f#*-}"
+done
