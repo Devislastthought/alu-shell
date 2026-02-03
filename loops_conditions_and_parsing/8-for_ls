@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
-# List files showing only text after first dash
-for f in *-*; do
-  echo "${f#*-}"
+# Using a for loop to iterate through the content of the current directory
+for item in *
+do
+   
+    if [[ $item == .* ]]
+    then
+        continue 
+    fi
+
+
+    name_part=$(echo "$item" | cut -d '-' -f 2-)
+
+    echo "$name_part"
 done
