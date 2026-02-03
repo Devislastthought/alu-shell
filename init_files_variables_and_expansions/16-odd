@@ -1,2 +1,2 @@
 #!/bin/bash
-nl -ba | grep -v '\t[02468]$' | cut -f2-
+grep -A 3 "root" /etc/passwd
